@@ -52,6 +52,10 @@
     $(document).ready(function() {
         $(".btnNumber").click(touchNumber);
     });
-    
+             $(".back").click(function(){
+         var str = $("#phonenumber").val();
+         $("#phonenumber").val(str.substring(0, str.length - 1));
+      });
+    </script>
 </body>
 </html>
