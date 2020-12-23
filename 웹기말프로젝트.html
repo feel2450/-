@@ -34,6 +34,17 @@
         <button class="clear" style="background-color: cadetblue;">C</button>
     </div>
     <hr>
+     <script>
+        function randomAmount() {
+            let charge = Math.random() * 100;
+            charge = Math.ceil(charge) * 1000;
+            charge = charge.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.querySelector("#amount").value = charge
+        }
+
+        window.onload = function() {
+            document.querySelector("#randomAmount").addEventListener("click", randomAmount);
+        }
     
 </body>
 </html>
